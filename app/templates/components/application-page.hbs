@@ -1,5 +1,22 @@
-<button onmousedown={{action 'toggle'}}>
-  Toggle
-</button>
+<div>
 
-{{yield endValue}}
+  <button onmousedown={{action 'toggle'}}>
+    Toggle
+  </button>
+
+  {{yield endValue}}
+
+  <mo-transition-spring endValue={{circles}}
+    willEnter={{action 'willEnter'}}
+    willLeave={{action 'willLeave'}} as |circles|>
+    <div class="demo7" onmousemove={{action 'mouseMove'}}>
+      {{#each-in circles as |timeStamp circle|}}
+        <div class="demo7-ball" style="
+          opacity: {{circle.opacity.val}};
+          scale: {{circle.scale.val}};
+          transform: translate3d({{circle.x.val}}px, {{circle.y.val}}px, 0) scale({{circle.scale.val}});
+          -webkit-transform: translate3d({{circle.x.val}}px, {{circle.y.val}}px, 0) scale({{circle.scale.val}})"/>
+      {{/each-in}}
+    </div>
+  </mo-transition-spring>
+</div>

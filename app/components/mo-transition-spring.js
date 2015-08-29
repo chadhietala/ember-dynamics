@@ -45,7 +45,7 @@ export default GlimmerComponent.extend({
   },
 
   didInsertElement() {
-    this.animationStep = animationStep.bind(null, false, () => this.stopAnimation(), () => this.attrs);
+    this.animationStep = animationStep.bind(null, true, () => this.stopAnimation(), () => this.attrs);
     this.startAnimating();
   },
 

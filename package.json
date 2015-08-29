@@ -1,5 +1,5 @@
 {
-  "name": "testing",
+  "name": "ember-dynamics",
   "version": "0.0.0",
   "description": "Small description for testing goes here",
   "private": true,
@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "ember-browsery-stats": "0.1.1",
     "ember-cli": "1.13.1",
     "ember-cli-app-version": "0.4.0",
     "ember-cli-babel": "^5.0.0",

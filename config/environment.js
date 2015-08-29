@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'testing',
+    modulePrefix: 'ember-dynamics',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
